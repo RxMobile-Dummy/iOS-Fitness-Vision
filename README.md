@@ -51,5 +51,3 @@ This app only works on iOS 14.0
 |||
 |:--:|:--:|
 ![1_g6eEb4sIYHDjbYhvVakbiQ](https://user-images.githubusercontent.com/88186302/187167023-64436674-6e45-4244-8b77-26402d60b13c.gif) | ![Squats2](https://user-images.githubusercontent.com/88186302/187168336-43a125da-6b64-4472-ae84-19b48da06191.gif)
-
-
