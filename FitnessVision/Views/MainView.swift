@@ -6,15 +6,32 @@
 //
 
 import SwiftUI
+import AVFoundation
+import AVKit
+import Vision
 
 struct MainView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
 
-struct MainView_Previews: PreviewProvider {
-  static var previews: some View {
-    MainView()
+  @StateObject var poseEstimator = PoseEstimator()
+
+  var body: some View {
+    VStack {
+      ZStack {
+        GeometryReader { geo in
+          CameraViewWrapper(poseEstimator: poseEstimator)
+          StickFigureView(poseEstimator: poseEstimator, size: geo.size)
+        }
+      }.frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width * 1920 / 1080, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+      HStack {
+        Text("Squat counter:")
+          .font(.title)
+        Text(String(poseEstimator.squatCount))
+          .font(.title)
+        Image(systemName: "exclamationmark.triangle.fill")
+          .font(.largeTitle)
+          .foregroundColor(Color.red)
+          .opacity(poseEstimator.isGoodPosture ? 0.0 : 1.0)
+      }
+    }
   }
 }

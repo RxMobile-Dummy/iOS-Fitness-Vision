@@ -16,6 +16,11 @@
 		D6638EC628B602920086F995 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6638EC528B602920086F995 /* MainView.swift */; };
 		D6638EC928B6031D0086F995 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6638EC828B6031D0086F995 /* CameraView.swift */; };
 		D6638ECC28B6036C0086F995 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6638ECB28B6036C0086F995 /* Shapes.swift */; };
+		D6638ECE28B616930086F995 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6638ECD28B616930086F995 /* CameraViewController.swift */; };
+		D6638ED328B61F7E0086F995 /* CameraViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6638ED228B61F7E0086F995 /* CameraViewWrapper.swift */; };
+		D6638ED728B624890086F995 /* PoseEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6638ED628B624890086F995 /* PoseEstimator.swift */; };
+		D6638EDB28B6339F0086F995 /* StickFigureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6638EDA28B6339F0086F995 /* StickFigureView.swift */; };
+		D6638EDE28B6458A0086F995 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6638EDD28B6458A0086F995 /* CGPointExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,11 @@
 		D6638EC528B602920086F995 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D6638EC828B6031D0086F995 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		D6638ECB28B6036C0086F995 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		D6638ECD28B616930086F995 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		D6638ED228B61F7E0086F995 /* CameraViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewWrapper.swift; sourceTree = "<group>"; };
+		D6638ED628B624890086F995 /* PoseEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseEstimator.swift; sourceTree = "<group>"; };
+		D6638EDA28B6339F0086F995 /* StickFigureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickFigureView.swift; sourceTree = "<group>"; };
+		D6638EDD28B6458A0086F995 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +108,10 @@
 		D6638E9928B5FFE80086F995 /* FitnessVision */ = {
 			isa = PBXGroup;
 			children = (
+				D6638EC428B602690086F995 /* Views */,
 				D6638ECA28B6034D0086F995 /* Shapes */,
 				D6638EC728B602CA0086F995 /* UIKit */,
-				D6638EC428B602690086F995 /* Views */,
+				D6638ED028B61F5B0086F995 /* Helper */,
 				D6638E9A28B5FFE80086F995 /* FitnessVisionApp.swift */,
 				D6638E9E28B5FFEA0086F995 /* Assets.xcassets */,
 				D6638EA028B5FFEA0086F995 /* Preview Content */,
@@ -137,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D6638EC528B602920086F995 /* MainView.swift */,
+				D6638EDA28B6339F0086F995 /* StickFigureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				D6638EC828B6031D0086F995 /* CameraView.swift */,
+				D6638ECD28B616930086F995 /* CameraViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -155,6 +168,40 @@
 				D6638ECB28B6036C0086F995 /* Shapes.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		D6638ED028B61F5B0086F995 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D6638EDC28B645080086F995 /* Extension */,
+				D6638ED528B6246A0086F995 /* Utility */,
+				D6638ED128B61F640086F995 /* Structure */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D6638ED128B61F640086F995 /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				D6638ED228B61F7E0086F995 /* CameraViewWrapper.swift */,
+			);
+			path = Structure;
+			sourceTree = "<group>";
+		};
+		D6638ED528B6246A0086F995 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D6638ED628B624890086F995 /* PoseEstimator.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		D6638EDC28B645080086F995 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D6638EDD28B6458A0086F995 /* CGPointExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +335,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6638EC628B602920086F995 /* MainView.swift in Sources */,
+				D6638EDB28B6339F0086F995 /* StickFigureView.swift in Sources */,
+				D6638EDE28B6458A0086F995 /* CGPointExtension.swift in Sources */,
+				D6638ECE28B616930086F995 /* CameraViewController.swift in Sources */,
 				D6638ECC28B6036C0086F995 /* Shapes.swift in Sources */,
 				D6638E9B28B5FFE80086F995 /* FitnessVisionApp.swift in Sources */,
 				D6638EC928B6031D0086F995 /* CameraView.swift in Sources */,
+				D6638ED328B61F7E0086F995 /* CameraViewWrapper.swift in Sources */,
+				D6638ED728B624890086F995 /* PoseEstimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,11 +500,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Amanda Mkhaliphi (YG67L698GC)";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessVision/Preview Content\"";
+				DEVELOPMENT_TEAM = NWQX8998PV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "cam needed";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,8 +518,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitnessvision.FitnessVision;
+				PRODUCT_BUNDLE_IDENTIFIER = com.radix.posmatDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = PosMat_Development_New;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,11 +532,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Amanda Mkhaliphi (YG67L698GC)";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessVision/Preview Content\"";
+				DEVELOPMENT_TEAM = NWQX8998PV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "cam needed";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -491,8 +550,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitnessvision.FitnessVision;
+				PRODUCT_BUNDLE_IDENTIFIER = com.radix.posmatDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = PosMat_Development_New;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

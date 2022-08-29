@@ -6,15 +6,14 @@
 //
 
 import UIKit
+import AVKit
 
 class CameraView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+  override class var layerClass: AnyClass {
+    AVCaptureVideoPreviewLayer.self
+  }
+  var previewLayer: AVCaptureVideoPreviewLayer {
+    layer as! AVCaptureVideoPreviewLayer
+  }
 }
